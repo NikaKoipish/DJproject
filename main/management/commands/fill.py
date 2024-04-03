@@ -5,6 +5,7 @@ from main.models import Student
 class Command(BaseCommand):
 
     def handle(self, *args, **options):
+        Student.objects.all().delete()
 
         students_list = [
             {"last_name": "Сидорова", "first_name": "Арина"},
